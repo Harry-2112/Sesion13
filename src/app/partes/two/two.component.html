@@ -1,0 +1,22 @@
+<div class="container text-center my-5">
+  <form>
+    <h5>{{titulo | uppercase}}</h5>
+    <div class="row g-2 align-items-center my-5">
+      <div class="col">
+        <label for="valor" class="col-form-label">{{valor | titlecase}}</label>
+      </div>
+      <div class="col">
+        <input type="number" placeholder="Ingresar numero a transformar" name="resultado" class="form-control"
+          [(ngModel)]="resultado">
+      </div>
+      <select class="form-select my-4" name="select" [(ngModel)]="select" (click)="log()">
+        <option disabled>Seleccione el tipo de moneda</option>
+        <option value="1">USD</option>
+        <option value="2">EUR</option>
+      </select>
+    </div>
+    <div class="resultado">
+      <p>Resultado: {{resultado | currency:moneda}}</p>
+    </div>
+  </form>
+</div>

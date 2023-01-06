@@ -1,0 +1,22 @@
+<div class="container text-center my-5">
+  <form>
+    <h5>{{titulo | uppercase}}</h5>
+    <div class="row g-2 align-items-center my-5">
+      <div class="col">
+        <label for="valor" class="col-form-label">{{valor | titlecase}}</label>
+      </div>
+      <div class="col">
+        <input type="text" placeholder="Crear Publicacion" name="resultado" class="form-control"
+          [(ngModel)]="resultado">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="publicar()">Publicar</button>
+    <div class="resultado" (click)="repetirCadaSegundo()">
+      <div *ngFor="let iten of publicaciones" class="row">
+        <p class="col">{{iten.nombre}}</p>
+        <p class="col">{{iten.relativa}}</p>
+        <p class="col">{{iten.creacion}}</p>
+      </div>
+    </div>
+  </form>
+</div>

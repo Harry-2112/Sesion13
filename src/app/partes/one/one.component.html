@@ -1,0 +1,16 @@
+<div class="container text-center my-5">
+  <form>
+    <h5>{{titulo | uppercase}}</h5>
+    <div class="row g-2 align-items-center my-5">
+      <div class="col">
+        <label for="valor" class="col-form-label">{{valor | uppercase}}</label>
+      </div>
+      <div class="col">
+        <input type="text" name="resultado" class="form-control" placeholder="Ingresar texto" [(ngModel)]="resultado">
+      </div>
+    </div>
+    <div class="resultado">
+      <p>Resultado: {{resultado | uppercase}}</p>
+    </div>
+  </form>
+</div>
